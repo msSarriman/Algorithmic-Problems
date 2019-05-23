@@ -23,3 +23,10 @@ all possible combinations for a string.
 <br> Write a program to find if a given program can be executed or not. A program's schedule, is 
 represented by P1(10, 5), where 10 is the starting time and 5 is the duration. A program can be scheduled,
 if it's schedule is not overlapping any other already scheduled programs.
+*	09_LonelyPixel
+<br>Given an N x M image with black pixels and white pixels, if a pixel is the only one in its color throughout its entire row and column, 
+then it is a lonely pixel. Find the number of lonely pixels in black from the image. (O(NM))
+*	10_BraceExpansion
+<br>Brace Expansion,Given a string, perfrom the brace expansion,For example,Input: s = "a{d,c,b}e",output: {ade , ace , abe}
+*	11_SortWithoutApi
+<br>Write a program to sort a string without using a Java API. I/P: "a390testai", O/P:"039aaiest"
