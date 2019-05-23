@@ -12,6 +12,8 @@ find if a given element exists in the matrix, in Linear Time.
 <br>Given N shop coordinates on a 2d plane, find the nearest shop from a man whose coordinates are given.
 *	05_RemoveDuplicateLines
 <br>Given a text file, remove all duplicate lines.
+------------------
+### Under Construction
 *	06_FindPermutationsAtString
 <br>A string consists of '0', '1', and '?'. The question mark can be either a '0' or a '1'. Find 
 all possible combinations for a string.
