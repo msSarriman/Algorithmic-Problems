@@ -1,5 +1,7 @@
 # A collection of Various Java Programms
 ------------------
+*	00_SmallestRectangleByArea
+<br>Given a set of points (class Points{ double x,y; }), find the smallest rectangle by area.
 *	01_FindThreeSmallestInArray
 <br>Find the 3 smallest elements in an array.
 *	02_FindUniqueLinesInFiles
