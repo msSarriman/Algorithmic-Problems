@@ -1,17 +1,41 @@
 /*
+MIT License
+
+Copyright (c) 2019 Emmanouil Sarris
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+/*
 Given a set of points (class Points{ double x,y; }), find the smallest rectangle by area.
 */
-
-/*
-			a
-    x--------------u
-	|
-b	|
-	|
-	|
-    y              z
+/**
+*			a
+*    x--------------u
+*	 |
+*b	 |
+*	 |
+*	 |
+*    y              z
 */
-
+/*
+Given a set of points (class Points{ double x,y; }), find the smallest rectangle by area.
+*/
 import java.util.HashMap;
 import java.util.Map;
 import java.util.LinkedList;
@@ -19,10 +43,17 @@ import java.util.HashSet;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class FindSmallestRectangle {
+public class Solution {
     public static HashMap<Double, LinkedList<Point>> sameX = new HashMap<>();
     public static HashMap<Double, LinkedList<Point>> sameY = new HashMap<>();
 
+    /**
+     * This method parses the given @mySet, and categorizes into two maps, all the points, regarding the same X coordinate,
+     * and the same Y coordinate. Then if a quadruple of Points with same X, Y coordinates by tuple, forms a rectangle,
+     * it is evaluated and stored into a priority queue, judged by its area.
+     * Then it prints a corresponding message, for the intel that was gathered.
+     * @param mySet
+     */
     public static void findSmallestRectangle(HashSet<Point> mySet) {
         sameX = new HashMap<>();
         sameY = new HashMap<>();
@@ -65,13 +96,16 @@ public class FindSmallestRectangle {
         }
         if (!myQueue.isEmpty()) {
             printDetails(myQueue.peek());
+        } else {
+            System.out.println("There are no rectangles formed");
         }
     }
 
     /**
-     * P(n,r) where n is the @myList.size() and r == 2
+     * C(n,r) where n is the @myList.size() and r == 2
+     * Method that return a LinkedList<Point>. Same as Combinations(n,2);
      * @param myList
-     * @return
+     * @return LinkedList<Point> pairs
      */
     private static LinkedList<LinkedList<Point>> pairify(LinkedList<Point> myList) {
         LinkedList<LinkedList<Point>> pairs = new LinkedList<>();
@@ -109,7 +143,14 @@ public class FindSmallestRectangle {
                 rec.area);
     }
 
-
+    /**
+     * This method checks if a shape described by the points @x, @y, @u, @z, is a rectangle
+     * @param x
+     * @param y
+     * @param u
+     * @param z
+     * @return true|false
+     */
     public static boolean formRectangle(Point x, Point y, Point u, Point z) {
         double dxy = Math.sqrt(Math.pow((y.x - x.x),2) + Math.pow((y.y - x.y),2));
         double dxu = Math.sqrt(Math.pow((u.x - x.x),2) + Math.pow((u.y - x.y),2));
@@ -120,15 +161,25 @@ public class FindSmallestRectangle {
         return dxy == dzu && dxu == dzy && dxz == dyu;
     }
 
+    /**
+     * This method calculates the area of a rectangle with points @x,@y,@u,@z
+     * @param x
+     * @param y
+     * @param u
+     * @param z
+     * @return area
+     */
     public static double calculateArea(Point x, Point y, Point u, Point z) {
         double dxy = Math.sqrt(Math.pow((y.x - x.x),2) + Math.pow((y.y - x.y),2));
         double dxu = Math.sqrt(Math.pow((u.x - x.x),2) + Math.pow((u.y - x.y),2));
         return dxy * dxu;
     }
-
-
 }
 
+/**
+ * Class Point
+ * This Class is an abstract representation of a Cartesian Point
+ */
 class Point {
     double x;
     double y;
@@ -139,6 +190,11 @@ class Point {
     }
 }
 
+/**
+ * Class Rectangle implements Comparable
+ * This Class is an abstract representation of a rectangle, represented by @x,@y,@u,@z.
+ * @overides compareTo(), to order Rectangle objects, depending on area.
+ */
 class Rectangle implements Comparable{
     Point x, y, u, z;
     double area;
