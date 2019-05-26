@@ -25,12 +25,12 @@ SOFTWARE.
 Given a set of points (class Points{ double x,y; }), find the smallest rectangle by area.
 */
 /**
-*			a
+*           a
 *    x--------------u
-*	 |
-*b	 |
-*	 |
-*	 |
+*    |
+*b   |
+*    |
+*    |
 *    y              z
 */
 /*
