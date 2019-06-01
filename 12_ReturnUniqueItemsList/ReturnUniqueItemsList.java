@@ -24,3 +24,36 @@ SOFTWARE.
 /*	12_ReturnUniqueItemsList
 Write a function to return a copy of a list with duplicates removed
 */
+
+import java.util.LinkedList;
+import java.util.HashSet;
+
+public class ReturnUniqueItemsList<T> {
+
+    protected static<T> void removeDuplicates(LinkedList<T> list) {
+        HashSet<T> mySet = new HashSet<>();
+        int i = 0;
+        while (i < list.size()) {
+            if (mySet.contains(list.get(i))) {
+                list.remove(i);
+            } else {
+                mySet.add(list.get(i++));
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(2);
+        list.add(5);
+        list.add(2);
+        list.add(5);
+        list.add(7);
+        list.add(9);
+        list.add(7);
+        System.out.println(list.toString());
+        removeDuplicates(list);
+        System.out.println(list.toString());
+    }
+
+}
