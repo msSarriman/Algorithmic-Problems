@@ -26,11 +26,12 @@ if it's schedule is not overlapping any other already scheduled programs.
 *	09_LonelyPixel
 <br>Given an N x M image with black pixels and white pixels, if a pixel is the only one in its color throughout its entire row and column, 
 then it is a lonely pixel. Find the number of lonely pixels in black from the image. (O(NM))
------------------
-### Under Construction
 *	10_BraceExpansion
 <br>Brace Expansion,Given a string, perfrom the brace expansion,For example,Input: s = "a{d,c,b}e",output: {ade , ace , abe}
 *	11_SortWithoutApi
 <br>Write a program to sort a string without using a Java API. I/P: "a390testai", O/P:"039aaiest"
 *	12_ReturnUniqueItemsList
 <br>Write a function to return a copy of a list with duplicates removed
+-----------------
+### Under Construction
+-- Coming soon
