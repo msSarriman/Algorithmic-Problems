@@ -32,6 +32,19 @@ then it is a lonely pixel. Find the number of lonely pixels in black from the im
 <br>Write a program to sort a string without using a Java API. I/P: "a390testai", O/P:"039aaiest"
 *	12_ReturnUniqueItemsList
 <br>Write a function to return a copy of a list with duplicates removed
+*	13_SimpleInterpreter
+<br>Write a Java program that is a mini-interpreter for a toy programming language that allows the following:
+<br>1. The use of variables that consist of a single letter (e.g. A, a, ...)
+<br>2. The use of whole numbers: ( e.g. -1, -20, 0, 1, 200)
+<br>3. Assignment (=): ( e.g. A = B, A = 10, )
+<br>4. Addition of exactly two elements (variables or constants) (+) : ( e.g. C = A + B, D = 1 + A, ... )
+<br>5. The ability to "return" a value when a single variable or constant is on a line by itself ( e.g. A, B, 10)
+<br>Your program will take as input a program in the toy programming language such as:
+<br>A = 2
+<br>B = 8
+<br>C = A + B
+<br>C
+<br>and return the return value of the toy program, in this case, the value 10
 -----------------
 ### Under Construction
 -- Coming soon
