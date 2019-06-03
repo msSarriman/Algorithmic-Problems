@@ -45,6 +45,12 @@ then it is a lonely pixel. Find the number of lonely pixels in black from the im
 <br>C = A + B
 <br>C
 <br>and return the return value of the toy program, in this case, the value 10
+*	14_Knapsack-Like Problem
+<br>Given two Lists of Lists of numbers (List<List<Integer>>>, or a(b)), and an integer X,
+<br>where b List<Integer> has two elements, key @index 0 and value @index 1,
+<br>find the best b pairs (can be more than one and elements of pairs must belong to different lists),
+<br>which are their value summary is closest to X (but not bigger than X).
+<br>The lists are unsorted.
 -----------------
 ### Under Construction
 -- Coming soon
