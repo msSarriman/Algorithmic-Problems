@@ -1,6 +1,6 @@
 ### Knapsack-Like Problem
 ----------------------------
-Given two Lists of Lists of numbers (List<List<Integer>>>, or a(b)), and an integer X,
+Given two Lists of Lists of numbers (List\<List\<Integer\>\>\>, or a(b)), and an integer X,
 where b List<Integer> has two elements, key @index 0 and value @index 1,
 find the best b pairs (can be more than one and elements of pairs must belong to different lists),
 which are their value summary is closest to X (but not bigger than X).
