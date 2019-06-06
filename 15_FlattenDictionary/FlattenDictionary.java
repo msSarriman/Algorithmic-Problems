@@ -107,7 +107,7 @@ public class Solution {
             if (!(kv.getValue() instanceof String)) {
                 helperFunction((HashMap) kv.getValue(), key + kv.getKey(), temp);
             } else {
-                temp.put(key + kv.getKey(), (String) kv.getValue());
+                temp.put(key + "." + kv.getKey(), (String) kv.getValue());
             }
         }
     }
