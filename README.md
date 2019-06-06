@@ -51,6 +51,11 @@ then it is a lonely pixel. Find the number of lonely pixels in black from the im
 <br>find the best b pairs (can be more than one and elements of pairs must belong to different lists),
 <br>which are their value summary is closest to X (but not bigger than X).
 <br>The lists are unsorted.
+*	15_FlattenDictionary
+<br>A dictionary is a type of data structure that is supported natively in all major interpreted languages such as JavaScript, Python, Ruby and PHP, where it’s known as an Object, Dictionary, Hash and Array, respectively. In simple terms, a dictionary is a collection of unique keys and their values. The values can typically be of any primitive type (i.e an integer, boolean, double, string etc) or other dictionaries (dictionaries can be nested). However, for this exercise assume that values are either an integer, a string or another dictionary.
+<br>Given a dictionary dict, write a function flattenDictionary that returns a flattened version of it .
+<br>If you’re using a compiled language such Java, C++, C#, Swift and Go, you may want to use a Map/Dictionary/Hash Table that maps strings (keys) to a generic type (e.g. Object in Java, AnyObject in Swift etc.) to allow nested dictionaries.
+<br>If a certain key is empty, it should be excluded from the output (see e in the example below).
 -----------------
 ### Under Construction
 -- Coming soon
